@@ -32,16 +32,15 @@ table.align["Improvement"] = "r"
 table.float_format = ".3"
 table.set_style(MARKDOWN)
 
-shape = (32, 1000, 4096)
+shape = (64, 128, 1024)
 table = evaluate_improvement("mx.softmax", mx.softmax, table, shape)
-
-shape = (128, 16, 1024)
-table = evaluate_improvement("nn.relu", nn.relu, table, shape)
-
-shape = (64, 128, 1024)
+table = evaluate_improvement("nn.gelu", nn.gelu, table, shape)
+table = evaluate_improvement("nn.gelu_approx", nn.gelu_approx, table, shape)
+table = evaluate_improvement("nn.gelu_fast_approx", nn.gelu_fast_approx, table, shape)
+table = evaluate_improvement("nn.relu6", nn.relu6, table, shape)
+table = evaluate_improvement("nn.leaky_relu", nn.leaky_relu, table, shape)
+table = evaluate_improvement("nn.glu", nn.glu, table, shape)
 table = evaluate_improvement("nn.softplus", nn.softplus, table, shape)
-
-shape = (64, 128, 1024)
 table = evaluate_improvement("nn.log_sigmoid", nn.log_sigmoid, table, shape)
 
 print(table)
