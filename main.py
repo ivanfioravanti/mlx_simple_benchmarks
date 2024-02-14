@@ -1,7 +1,7 @@
 import time
 import mlx.core as mx
 import mlx.nn as nn
-from prettytable import PrettyTable
+from prettytable import PrettyTable, MARKDOWN
 
 
 def timeit(fun, x):
@@ -30,6 +30,7 @@ table.align["Function"] = "l"
 table.align["Duration"] = "r"
 table.align["Improvement"] = "r"
 table.float_format = ".3"
+table.set_style(MARKDOWN)
 
 shape = (32, 1000, 4096)
 table = evaluate_improvement("mx.softmax", mx.softmax, table, shape)
