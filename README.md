@@ -6,24 +6,24 @@ Here current results on M3 Max (cores: 4E+12P+40GPU)
 
 | Function                      | Duration | Improvement |
 |:------------------------------|---------:|------------:|
-| mx.softmax                    |    0.603 |           - |
-| compiled(mx.softmax)          |    0.464 |       23.2% |
-| nn.gelu                       |    0.591 |           - |
-| compiled(nn.gelu)             |    0.279 |       52.7% |
-| nn.gelu_approx                |    0.803 |           - |
-| compiled(nn.gelu_approx)      |    0.292 |       63.6% |
-| nn.gelu_fast_approx           |    0.436 |           - |
-| compiled(nn.gelu_fast_approx) |    0.269 |       38.3% |
-| nn.relu6                      |    0.354 |           - |
-| compiled(nn.relu6)            |    0.267 |       24.6% |
-| nn.leaky_relu                 |    0.358 |           - |
-| compiled(nn.leaky_relu)       |    0.267 |       25.5% |
-| nn.glu                        |    0.330 |           - |
-| compiled(nn.glu)              |    0.234 |       29.2% |
-| nn.softplus                   |    0.298 |           - |
-| compiled(nn.softplus)         |    0.252 |       15.3% |
-| nn.log_sigmoid                |    0.459 |           - |
-| compiled(nn.log_sigmoid)      |    0.273 |       40.4% |
+| mx.softmax                    |    3.120 |           - |
+| compiled(mx.softmax)          |    2.332 |       25.3% |
+| nn.gelu                       |    4.292 |           - |
+| compiled(nn.gelu)             |    0.931 |       78.3% |
+| nn.gelu_approx                |    6.121 |           - |
+| compiled(nn.gelu_approx)      |    0.940 |       84.6% |
+| nn.gelu_fast_approx           |    2.803 |           - |
+| compiled(nn.gelu_fast_approx) |    0.946 |       66.3% |
+| nn.relu6                      |    1.680 |           - |
+| compiled(nn.relu6)            |    0.929 |       44.7% |
+| nn.leaky_relu                 |    2.010 |           - |
+| compiled(nn.leaky_relu)       |    0.921 |       54.2% |
+| nn.glu                        |    1.516 |           - |
+| compiled(nn.glu)              |    0.711 |       53.1% |
+| nn.softplus                   |    1.028 |           - |
+| compiled(nn.softplus)         |    0.923 |       10.2% |
+| nn.log_sigmoid                |    2.569 |           - |
+| compiled(nn.log_sigmoid)      |    0.923 |       64.1% |
 
 There is a complete builtin benchmark suite in Apple MLX [here](https://github.com/ml-explore/mlx/blob/main/benchmarks/python/comparative/README.md)
 I will add compiled version there with a PR.

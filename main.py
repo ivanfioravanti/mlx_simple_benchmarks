@@ -32,7 +32,7 @@ table.align["Improvement"] = "r"
 table.float_format = ".3"
 table.set_style(MARKDOWN)
 
-shape = (64, 128, 1024)
+shape = (128, 1024, 512)
 table = evaluate_improvement("mx.softmax", mx.softmax, table, shape)
 table = evaluate_improvement("nn.gelu", nn.gelu, table, shape)
 table = evaluate_improvement("nn.gelu_approx", nn.gelu_approx, table, shape)
